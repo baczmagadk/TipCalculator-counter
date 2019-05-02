@@ -4,89 +4,345 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#000000"
+    tools:context=".controller.MainActivity">
 
-    <TextView
-        android:id="@+id/title"
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="213dp"
+        android:layout_height="282dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:columnCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentsign">
+
+        <ImageButton
+            android:id="@+id/one"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num1" />
+
+        <ImageButton
+            android:id="@+id/two"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num2" />
+
+        <ImageButton
+            android:id="@+id/three"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num3" />
+
+        <ImageButton
+            android:id="@+id/four"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num4" />
+
+        <ImageButton
+            android:id="@+id/five"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num5" />
+
+        <ImageButton
+            android:id="@+id/six"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num6" />
+
+        <ImageButton
+            android:id="@+id/seven"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num7" />
+
+        <ImageButton
+            android:id="@+id/eight"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num8" />
+
+        <ImageButton
+            android:id="@+id/nine"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num9" />
+
+        <ImageButton
+            android:id="@+id/decimal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/decimal" />
+
+        <ImageButton
+            android:id="@+id/zero"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/num0" />
+
+        <ImageButton
+            android:id="@+id/clear"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/close" />
+    </android.support.v7.widget.GridLayout>
+
+    <EditText
+        android:id="@+id/numOfPeople"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
-        android:text="@string/title"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/subtotalInputLayout"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/splitInputLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/androidGreen"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="number"
+        android:textColor="@color/androidGreen"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/subtotal"
-            android:inputType="numberDecimal" />
+    <EditText
+        android:id="@+id/billTotal"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/androidGreen"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/androidGreen"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfPeople"
+        android:focusable="false"/>
 
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/splitInputLayout"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/textNumOfPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="512dp"
+        android:text="Enter Number Of People:"
+        android:textColor="@color/androidGreen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/numOfPeople"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Enter Bill Amount:"
+        android:textColor="@color/androidGreen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/billTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumOfPeople" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="181dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:checkedButton="@+id/twentyPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/billTotal"
+        >
+
+        <RadioButton
+            android:id="@+id/fivePercent"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="%5"
+            android:textColor="@color/androidGreen"
+            android:textSize="30sp"/>
+
+        <RadioButton
+            android:id="@+id/tenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="%10"
+            android:textColor="@color/androidGreen"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/fifteenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:clickable="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="%15"
+            android:textColor="@color/androidGreen"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/twentyPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="%20"
+            android:textColor="@color/androidGreen"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="Other"
+            android:textColor="@color/androidGreen"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="96dp"
+        android:text="Select Tip Percentage:"
+        android:textColor="@color/androidGreen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/calculateTip"
+        android:layout_width="218dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/androidGreen"
+        android:text="Calculate Tip"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtotalInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <android.support.design.widget.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/splitHint"
-            android:inputType="number" />
-    </android.support.design.widget.TextInputLayout>
+    <ImageView
+        android:id="@+id/androidHead"
+        android:layout_width="49dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:srcCompat="@drawable/android" />
 
-    <RadioButton
-        android:id="@+id/radioTwenty"
+    <ImageView
+        android:id="@+id/android2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/radioTwenty"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="227dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.403"
+        app:srcCompat="@drawable/androidbody" />
 
-    <RadioButton
-        android:id="@+id/radioFifteen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/radioFifteen"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="269dp" />
+    <ImageView
+        android:id="@+id/android1"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/billTotal"
+        app:layout_constraintVertical_bias="0.553"
+        app:srcCompat="@drawable/androidbody" />
 
-    <RadioButton
-        android:id="@+id/radioTen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/radioTen"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="312dp" />
+    <TextView
+        android:id="@+id/percentsign"
+        android:layout_width="16dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="%"
+        android:textColor="@color/androidGreen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/radioCustom"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="359dp" />
+    <EditText
+        android:id="@+id/otherPercentage"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/androidGreen"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/androidGreen"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/percentsign"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.571" />
 
 </android.support.constraint.ConstraintLayout>

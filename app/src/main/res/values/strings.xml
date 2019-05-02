@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">TipCalculator-counter</string>
-    <string name="title">TipCalculator-Counter</string>
-    <string name="splitHint">Number of Ways Split</string>
-    <string name="subtotal">Check Subtotal</string>
-    <string name="radioTwenty">20%</string>
-    <string name="radioFifteen">15%</string>
-    <string name="radioTen">10%</string>
-    <string name="radioCustom">Custom</string>
+<string name="app_name">TipCalculator-counter</string>
+<string name="title">TipCalculator-Counter</string>
+<string name="five">5%</string>
+<string name="ten">10%</string>
+<string name="fifteenPercent">15%</string>
+<string name="twentyPercent">20%</string>
+<string name="twentyFivePercent">25%</string>
 </resources>
